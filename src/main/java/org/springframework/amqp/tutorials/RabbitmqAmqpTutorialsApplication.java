@@ -1,6 +1,5 @@
-package org.springframework.amqp.tutorials.rabbitmqamqptutorials;
+package org.springframework.amqp.tutorials;
 
-import org.springframework.amqp.tutorials.tut1.RabbitAmqpTutorialsRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,7 +20,7 @@ public class RabbitmqAmqpTutorialsApplication {
         };
     }
 
-    @Profile("usage_message")
+    @Profile("!usage_message")
     @Bean
     public CommandLineRunner tutorial() {
         return new RabbitAmqpTutorialsRunner();
